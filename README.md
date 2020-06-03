@@ -10,4 +10,5 @@ A repo for analysing sentiments in WhatsApp Chat
 - NLP
 - openNLP
 - RColorBrewer
+## Sample Output
 ![Screenshot](Capture.JPG)
