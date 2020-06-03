@@ -56,7 +56,7 @@ rownames(TotalSentiment) <- NULL
 ggplot(data = TotalSentiment, aes(x = sentiment, y = count)) +
   geom_bar(aes(fill = sentiment), stat = "identity") +
   theme(legend.position = "none") +
-  xlab("senti ment") +
+  xlab("sentiment") +
   ylab("TotalCount") +
   ggtitle("Total Sentiment Score")
 
