@@ -43,8 +43,13 @@ set.seed(1056)
 #Constructing wordcloud
 wordcloud(words = d$word, freq = d$freq, min.freq = 1, max.words = 200, random.order = F, rot.per = 0.35, colors = brewer.pal(8, "Dark2"))
 
+#Frequently used words
+barplot(d[1:10,]$freq, las = 2, names.arg = d[1:10,]$word,
+        col = "lightblue", main = "Most frequent words",
+        ylab = "Word frequencies")
+
 #Analysing Sentiment in text
-sentiment <- (get_nrc_sentiment(as.character(texts)))
+sentiment <- (get_nrc_sentiment(as.character(texts), language = "english"))
 text <- cbind(texts, sentiment)
 TotalSentiment <- data.frame(colSums(text[, c(2:11)]))
 names(TotalSentiment) <- "count"
